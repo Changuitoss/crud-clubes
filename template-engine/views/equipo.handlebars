@@ -1,0 +1,11 @@
+<img src="{{equipo.crestUrl}}" alt="Escudo" class="equipo equipo__escudo">
+<h2 class="equipo equipo__data equipo__data--nombre">{{equipo.name}}</h2>
+<p class="equipo equipo__data">Fundado: {{equipo.founded}}</p>
+<p class="equipo equipo__data">Estadio: {{equipo.venue}}</p>
+<div class="equipo__botones">
+  <a href="" class="equipo__editar equipo__boton">Editar</a>
+  <a href="" class="equipo__eliminar equipo__boton">Borrar</a>
+</div>
+<p class="equipo equipo__data equipo__data--jugadores">Plantilla:</p>
+
+{{>jugadores jugadores=equipo.squad}}

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 3rem;
+}
+
+.titulo {
+  margin-bottom: 2rem;
+}
+
+.agregar__equipo {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .5rem;
+  margin-bottom: 2rem;
+}
+
+.agregar__equipo:hover {
+  background-color: lightgray;
+}
+
+.agregar__label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.agregar__jugadores {
+  margin: 1rem 0 1rem 0;
+}
+
+.agregar__submit {
+  display: block;
+  margin-top: 1rem;
+}
+
+.lista {
+  font-size: 1rem;
+}
+
+.lista__item {
+  list-style: none;
+  margin: 1rem auto;
+  display: flex;
+
+}
+
+.lista__escudo {
+  width: 3rem;
+}
+
+.lista__nombre {
+  margin-left: 2rem;
+  align-self: center;
+}
+
+
+.lista__ver {
+  margin-left: 2rem;
+  align-self: center;
+}
+
+.lista__ver:link {
+  text-decoration: none;
+}
+
+.lista__ver:visited {
+  color: black;
+}
+
+.lista__eliminar {
+  margin-left: .5rem;
+  align-self: center;
+}
+
+.lista__eliminar:link {
+  text-decoration: none;
+}
+
+.lista__eliminar:visited {
+  color: black;
+}
+      
+.lista__links:hover {
+  color: red;
+}
+
+.equipo {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.equipo__escudo {
+  width: 12rem;
+  display: block;
+  margin: 1rem auto 2rem auto;
+}
+
+.equipo__data {
+  margin: .5rem;
+}
+
+.equipo__data--nombre {
+  font-size: 2rem;
+}
+
+.equipo__botones {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.equipo__boton {
+  border: 1px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .5rem;
+}
+
+.equipo__boton:hover {
+  background-color: lightgray;
+}
+
+.equipo__data--jugadores {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.equipo__jugador{
+  text-align: center;
+  margin: 1rem;
+  list-style: none;
+}

@@ -1,0 +1,10 @@
+<ul class="lista">
+{{#each items as |item|}}
+  <li class="lista lista__item">
+    <img class="lista lista__escudo" src="{{item.crestUrl}}" alt="Escudo" class="escudo">
+    <h3 class="lista lista__nombre">{{item.name}}</h3>
+    <a href="/equipo/{{item.tla}}" class="lista lista__links lista__ver">Ver</a>
+    <a href="" class="lista lista__links lista__eliminar">Eliminar</a>
+  </li>
+{{/each}}
+</ul>
