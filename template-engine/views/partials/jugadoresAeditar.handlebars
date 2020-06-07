@@ -1,0 +1,15 @@
+    {{#each equipo.squad as |jugador|}}
+    <div class="jugadores__editar">
+      <label for="nombre" class="nombre agregar__label">Nombre:</label>
+      <input type="text" name="jugadorname" id="nombre" value="{{jugador.name}}"> 
+
+      <label for="nacionalidad" class="nombre agregar__label">Nacionalidad:</label>
+      <input type="text" name="countryOfBirth" id="nacionalidad" value="{{jugador.countryOfBirth}}"> 
+
+      <label for="position" class="nombre agregar__label">Posicion:</label>
+      <input type="text" name="position" id="position" value="{{jugador.position}}"> 
+{{!--       <div>
+        <a href="/borrarjugador/{{jugador.id}}" class="equipo__boton jugador__borrar">Borrar</a>
+      </div> --}}
+    </div>
+    {{/each}}

@@ -1,10 +1,15 @@
+<a href="/" class="atras">Home</a>
 <img src="{{equipo.crestUrl}}" alt="Escudo" class="equipo equipo__escudo">
 <h2 class="equipo equipo__data equipo__data--nombre">{{equipo.name}}</h2>
 <p class="equipo equipo__data">Fundado: {{equipo.founded}}</p>
 <p class="equipo equipo__data">Estadio: {{equipo.venue}}</p>
 <div class="equipo__botones">
-  <a href="" class="equipo__editar equipo__boton">Editar</a>
-  <a href="" class="equipo__eliminar equipo__boton">Borrar</a>
+  <a href="/editar/{{equipo.tla}}" class=" equipo__boton">Editar</a>
+  <a href="/agregarjugador/{{equipo.tla}}" class=" equipo__boton">Agregar jugador</a>
+    <form action="/borrarequipo/{{equipo.tla}}" method="POST" enctype="multipart/form-data" class="equipo__borrar">
+      <input type="hidden">
+      <button type="submit" class="equipo__botones equipo__boton">Borrar</button>
+    </form>
 </div>
 <p class="equipo equipo__data equipo__data--jugadores">Plantilla:</p>
 

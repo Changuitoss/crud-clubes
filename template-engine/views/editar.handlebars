@@ -1,0 +1,30 @@
+{{#if equipo.crestUrl}}
+<img src="{{equipo.crestUrl}}" alt="" class="equipo__escudo">
+{{/if}}
+
+<form action="/editar/{{equipo.tla}}" method="POST" enctype="multipart/form-data">
+  <label class="agregar__label agregar__escudo" for="escudo">Escudo: </label>
+  <input type="file" name="escudo" id="escudo">
+  <button type="submit">Subir</button>
+</form>
+
+<form action="/editar/{{equipo.tla}}" method="POST" enctype="multipart/form-data">
+  <label class="agregar__label" for="nombre">Nombre: </label>
+  <input type="text" name="name" id="nombre" value="{{equipo.name}}" required>
+
+  <label class="agregar__label" for="nombre">Siglas: </label>
+  <input type="text" name="tla" id="siglas" maxlength="3" value="{{equipo.tla}}" required>
+
+  <label class="agregar__label" for="fundado">Fundado: </label>
+  <input type="number" name="founded" id="fundado" value="{{equipo.founded}}" required>
+
+  <label class="agregar__label" for="estadio">Estadio: </label>
+  <input type="text" name="venue" id="estadio" value="{{equipo.venue}}" required>
+
+  <div>
+    <p class="agregar__jugadores">Jugadores</p>
+    {{>jugadoresAeditar equipo=equipo}}
+  </div>
+
+  <input class="agregar__submit" type="submit" value="Aceptar" />
+</form>

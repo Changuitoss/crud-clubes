@@ -1,0 +1,13 @@
+
+<form action="/agregarjugador/{{equipo}}" method="POST" enctype="application/json">
+  <label class="agregar__label" for="nombre">Nombre: </label>
+  <input type="text" name="name" id="nombre" required>
+
+  <label class="agregar__label" for="posicion">Posicion: </label>
+  <input type="text" name="position" id="posicion" required>
+
+  <label class="agregar__label" for="nacionalidad">Nacionalidad: </label>
+  <input type="text" name="countryOfBirth" id="nacionalidad" required>
+
+  <input class="agregar__submit" type="submit" value="Agregar" />
+</form>

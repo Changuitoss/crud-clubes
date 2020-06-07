@@ -1,5 +1,5 @@
 
-<form action="/agregar" method="POST" enctype="multipart/form-data">
+<form action="/agregarequipo" method="POST" enctype="multipart/form-data">
   <label class="agregar__label" for="imagen">Escudo: </label>
   <input type="file" name="crestUrl" id="escudo" required>
 
@@ -14,18 +14,6 @@
 
   <label class="agregar__label" for="estadio">Estadio: </label>
   <input type="text" name="venue" id="estadio" required>
-
-{{!--   <div class="agregar__jugadores">
-    <p class="agregar__jugadores">Jugadores</p>
-    <label for="nombre" class="nombre agregar__label">Nombre:</label>
-    <input type="text" name="name" id="nombre"> 
-
-    <label for="nacionalidad" class="nombre agregar__label">Nacionalidad:</label>
-    <input type="text" name="countryOfBirth" id="nacionalidad"> 
-
-    <label for="position" class="nombre agregar__label">Posicion:</label>
-    <input type="text" name="position" id="position"> 
-  </div> --}}
 
   <input class="agregar__submit" type="submit" value="Agregar" />
 </form>

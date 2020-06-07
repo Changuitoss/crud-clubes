@@ -9,6 +9,16 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.atras{
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
   margin: 3rem;
 }
@@ -31,12 +41,14 @@ body {
 }
 
 .agregar__label {
+  font-size: 1rem;
   display: block;
   margin-top: 1rem;
 }
 
 .agregar__jugadores {
-  margin: 1rem 0 1rem 0;
+  margin: 2.5rem 0 1rem 0;
+  font-size: 1.3rem;
 }
 
 .agregar__submit {
@@ -64,7 +76,6 @@ body {
   align-self: center;
 }
 
-
 .lista__ver {
   margin-left: 2rem;
   align-self: center;
@@ -78,21 +89,25 @@ body {
   color: black;
 }
 
-.lista__eliminar {
-  margin-left: .5rem;
+.form__borrar {
   align-self: center;
 }
 
-.lista__eliminar:link {
-  text-decoration: none;
+.lista__eliminar {
+  font-size: 1rem;
+  margin-left: .5rem;
+  align-self: center;
+  border: none;
+  background-color: white;
 }
 
-.lista__eliminar:visited {
-  color: black;
+.lista__eliminar:hover {
+  color: red;
+  cursor: pointer;
 }
       
 .lista__links:hover {
-  color: red;
+  color: gray;
 }
 
 .equipo {
@@ -120,14 +135,21 @@ body {
 }
 
 .equipo__boton {
+  font-size: .8rem;
   border: 1px solid black;
   border-radius: 3px;
   text-decoration: none;
   padding: .5rem;
+  background-color: white;
+  color: black;
 }
 
 .equipo__boton:hover {
   background-color: lightgray;
+}
+
+.equipo__borrar {
+  display: inline-block;
 }
 
 .equipo__data--jugadores {
@@ -140,4 +162,13 @@ body {
   text-align: center;
   margin: 1rem;
   list-style: none;
+}
+
+.jugadores__editar {
+  margin-bottom: 3rem;
+}
+
+.jugador__borrar {
+  display: inline-block;
+  margin-top: .5rem;
 }

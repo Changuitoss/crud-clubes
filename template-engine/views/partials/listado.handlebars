@@ -4,7 +4,14 @@
     <img class="lista lista__escudo" src="{{item.crestUrl}}" alt="Escudo" class="escudo">
     <h3 class="lista lista__nombre">{{item.name}}</h3>
     <a href="/equipo/{{item.tla}}" class="lista lista__links lista__ver">Ver</a>
-    <a href="" class="lista lista__links lista__eliminar">Eliminar</a>
+   
+    <form action="/borrarequipo/{{item.tla}}" method="POST" enctype="multipart/form-data" class="form__borrar">
+      <input type="hidden">
+      <button type="submit" class="lista__eliminar">Borrar</button>
+    </form>
+
+
+   {{!--  <a href="/equipo/{{item.tla}}" class="lista lista__links lista__eliminar">Borrar</a> --}}
   </li>
 {{/each}}
 </ul>
