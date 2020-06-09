@@ -1,28 +1,40 @@
-{{#if equipo.crestUrl}}
-<img src="{{equipo.crestUrl}}" alt="" class="equipo__escudo">
-{{/if}}
+<div class="editar">
+  {{#if equipo.crestUrl}}
+  <img src="{{equipo.crestUrl}}" alt="" class="editar__escudo">
+  {{/if}}
+
+  <form action="/editar/{{equipo.tla}}" method="POST" enctype="multipart/form-data" class="editar__subir-escudo">
+    <label class="agregar__label agregar__escudo" for="escudo">Escudo: </label>
+    <input type="file" name="escudo" id="escudo">
+    <button type="submit">Subir</button>
+  </form>
+</div>
+
+
 
 <form action="/editar/{{equipo.tla}}" method="POST" enctype="multipart/form-data">
-  <label class="agregar__label agregar__escudo" for="escudo">Escudo: </label>
-  <input type="file" name="escudo" id="escudo">
-  <button type="submit">Subir</button>
-</form>
+  <div class="editar__campos">
+    <div class="editar__campo">
+      <label class="agregar__label" for="nombre">Nombre: </label>
+      <input type="text" name="name" id="nombre" value="{{equipo.name}}" required>
+    </div>
 
-<form action="/editar/{{equipo.tla}}" method="POST" enctype="multipart/form-data">
-  <label class="agregar__label" for="nombre">Nombre: </label>
-  <input type="text" name="name" id="nombre" value="{{equipo.name}}" required>
-
-  <label class="agregar__label" for="nombre">Siglas: </label>
-  <input type="text" name="tla" id="siglas" maxlength="3" value="{{equipo.tla}}" required>
-
-  <label class="agregar__label" for="fundado">Fundado: </label>
-  <input type="number" name="founded" id="fundado" value="{{equipo.founded}}" required>
-
-  <label class="agregar__label" for="estadio">Estadio: </label>
-  <input type="text" name="venue" id="estadio" value="{{equipo.venue}}" required>
+    <div class="editar__campo">    
+      <label class="agregar__label" for="nombre">Siglas: </label>
+      <input type="text" name="tla" id="siglas" maxlength="3" value="{{equipo.tla}}" required>
+    </div>
+    <div class="editar__campo">    
+      <label class="agregar__label" for="fundado">Fundado: </label>
+      <input type="number" name="founded" id="fundado" value="{{equipo.founded}}" required>
+    </div>
+    <div class="editar__campo">    
+      <label class="agregar__label" for="estadio">Estadio: </label>
+      <input type="text" name="venue" id="estadio" value="{{equipo.venue}}" required>
+    </div>
+  </div>
 
   <div>
-    <p class="agregar__jugadores">Jugadores</p>
+    <p class="agregar__jugadores">Plantilla</p>
     {{>jugadoresAeditar equipo=equipo}}
   </div>
 

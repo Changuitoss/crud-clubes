@@ -1,9 +1,10 @@
-<ul class="equipo__jugadores">
-  {{#each jugadores as |jugador|}}
-  <li class="equipo equipo__jugador">
-    <p>Nombre: {{jugador.name}}</p>
-    <p>Posicion: {{jugador.position}}</p>
-    <p>Nacionalidad: {{jugador.countryOfBirth}}</p>
-  </li>
-  {{/each}}
-</ul>
+
+  <ul class="equipo__jugadores">
+    {{#each jugadores as |jugador|}}
+    <li class="equipo equipo__jugador">
+      <p><span class="equipo__jugadores--label">Nombre:</span> {{jugador.name}}</p>
+      <p><span class="equipo__jugadores--label">Posicion:</span> {{jugador.position}}</p>
+      <p><span class="equipo__jugadores--label">Nacionalidad:</span> {{jugador.countryOfBirth}}</p>
+    </li>
+    {{/each}}
+  </ul>

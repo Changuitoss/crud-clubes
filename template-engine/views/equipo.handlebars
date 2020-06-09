@@ -1,16 +1,24 @@
-<a href="/" class="atras">Home</a>
-<img src="{{equipo.crestUrl}}" alt="Escudo" class="equipo equipo__escudo">
-<h2 class="equipo equipo__data equipo__data--nombre">{{equipo.name}}</h2>
-<p class="equipo equipo__data">Fundado: {{equipo.founded}}</p>
-<p class="equipo equipo__data">Estadio: {{equipo.venue}}</p>
-<div class="equipo__botones">
-  <a href="/editar/{{equipo.tla}}" class=" equipo__boton">Editar</a>
-  <a href="/agregarjugador/{{equipo.tla}}" class=" equipo__boton">Agregar jugador</a>
-    <form action="/borrarequipo/{{equipo.tla}}" method="POST" enctype="multipart/form-data" class="equipo__borrar">
-      <input type="hidden">
-      <button type="submit" class="equipo__botones equipo__boton">Borrar</button>
-    </form>
+<div class="equipo__data">
+  <div class="equipo__info">
+    <img src="{{equipo.crestUrl}}" alt="Escudo" class="equipo equipo__escudo">
+    <h2 class="equipo equipo__nombre equipo__data--nombre">{{equipo.name}}</h2>
+    <p class="equipo equipo__fundado">Fundado: {{equipo.founded}}</p>
+    <p class="equipo equipo__estadio">Estadio: {{equipo.venue}}</p>
+    <div class="equipo__botones">
+      <a href="/editar/{{equipo.tla}}" class=" equipo__boton">Editar</a>
+      <a href="/agregarjugador/{{equipo.tla}}" class=" equipo__boton">Agregar jugador</a>
+      <form action="/borrarequipo/{{equipo.tla}}" method="POST" enctype="multipart/form-data" class="equipo__borrar">
+        <input type="hidden">
+        <button type="submit" class="equipo__botones equipo__boton">Borrar</button>
+      </form>
+    </div>
+  </div>
+  
+  <img class="equipo equipo__mapa" src="https://maps.googleapis.com/maps/api/staticmap?center={{address}}&zoom=14&size=400x320&key=AIzaSyBgr0gn013-3jSOHW8Afs-Rewy-a6uESQA" alt="">
 </div>
-<p class="equipo equipo__data equipo__data--jugadores">Plantilla:</p>
+
+
+<p class="equipo equipo__data--jugadores">Plantilla:</p>
 
 {{>jugadores jugadores=equipo.squad}}
+

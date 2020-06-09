@@ -24,9 +24,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/equipo/:id', (req, res) => {
+  const equipo = JSON.parse(fs.readFileSync(`./data/equipos/${req.param('id')}.json`));
+  const address = (equipo.address).split(' ').join('+')
+
   res.render('equipo', {
     layout: 'base',
-    equipo: JSON.parse(fs.readFileSync(`./data/equipos/${req.param('id')}.json`))
+    equipo,
+    address
   });
 });
 

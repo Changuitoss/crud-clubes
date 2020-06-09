@@ -43,12 +43,18 @@ body {
 .agregar__label {
   font-size: 1rem;
   display: block;
-  margin-top: 1rem;
+  margin: .5rem 0 .5rem 0;
+  font-size: .8rem;
+  color: gray;
 }
 
 .agregar__jugadores {
-  margin: 2.5rem 0 1rem 0;
+  width: 70%;
+  text-align: center;
+  margin: 4.5rem auto 1rem auto;
   font-size: 1.3rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 
 .agregar__submit {
@@ -115,18 +121,31 @@ body {
   text-align: center;
 }
 
+.equipo__data {
+  display: grid;
+  margin: .5rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
 .equipo__escudo {
   width: 12rem;
   display: block;
   margin: 1rem auto 2rem auto;
 }
 
-.equipo__data {
-  margin: .5rem;
-}
-
 .equipo__data--nombre {
   font-size: 2rem;
+}
+
+.equipo__info {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.equipo__mapa {
+  align-self: center;
+  border-radius: 5px;
 }
 
 .equipo__botones {
@@ -153,9 +172,13 @@ body {
 }
 
 .equipo__data--jugadores {
+  width: 60%;
   text-align: center;
   font-size: 1.5rem;
-  margin-top: 2rem;
+  margin: 2.5rem auto 1.5rem auto;
+  padding: 1rem 0;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .equipo__jugador{
@@ -164,11 +187,53 @@ body {
   list-style: none;
 }
 
+.equipo__jugadores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.equipo__jugadores--label {
+  font-size: .8rem;
+  color: gray;
+}
+
 .jugadores__editar {
+  text-align: center;
+  display: grid;
   margin-bottom: 3rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .jugador__borrar {
   display: inline-block;
   margin-top: .5rem;
+}
+
+.editar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.editar__escudo {
+  width: 12rem;
+  display: block;
+  margin: 1rem auto 2rem auto;
+  align-self: center;
+}
+
+.editar__subir-escudo {
+  align-self: center;
+}
+
+.editar__jugador {
+  margin: 1rem;
+}
+
+.editar__campos {
+  text-align: center;
+}
+
+.editar__campo {
+  display: inline-block;
+  margin-right: 1rem;
 }
