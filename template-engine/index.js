@@ -6,7 +6,7 @@ const multer = require('multer');
 const upload = multer({ dest: './uploads/imagenes' });
 const exphbs = require('express-handlebars');
 
-const PUERTO = 8080;
+const PUERTO = process.env.PORT || 8080;
 const app = express();
 const hbs = exphbs.create();
 
