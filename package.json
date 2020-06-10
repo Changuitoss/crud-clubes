@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start" : "node ./template-engine/index.js",
     "dev:template": "cd ./template-engine && nodemon --inspect index.js",
     "dev:express": "nodemon ./express/index-1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,5 +27,8 @@
   "devDependencies": {
     "express-handlebars": "^4.0.4",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "10.16.0"
   }
 }
