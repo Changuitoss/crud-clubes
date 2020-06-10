@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config({path: __dirname + '/api.env'});
 const fs = require('fs');
 const express = require('express');
 const multer = require('multer');
@@ -25,12 +26,15 @@ app.get('/', (req, res) => {
 
 app.get('/equipo/:id', (req, res) => {
   const equipo = JSON.parse(fs.readFileSync(`./data/equipos/${req.param('id')}.json`));
-  const address = (equipo.address).split(' ').join('+')
+  const address = (equipo.address).split(' ').join('+');
+  const apiKey = process.env.API_KEY;
+  //console.log(apiKey)
 
   res.render('equipo', {
     layout: 'base',
     equipo,
-    address
+    address,
+    apiKey
   });
 });
 
